@@ -1,0 +1,307 @@
+
+
+@import url("reset.css");
+
+
+
+[class*="__content"]{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+
+
+.title{
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 5px;
+	font-weight: 700;
+	padding: 20px 0;
+}
+
+
+
+.title::first-letter{
+	font-size: 70px;
+	color: purple;
+}
+
+
+.transform_padding,
+.transform-td{
+	padding: 100px;
+}
+
+.transform__title,
+.td__title {
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 5px;
+	color: rgb(212, 67, 67);
+	font-weight: 700;
+	padding: 100px 0 20px 0;
+}
+
+.transform__body,
+.td__body,
+.td__body-style{
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+	background-color: rgba(134, 231, 231,0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content,
+.td__content{
+	width: 150px;
+	height: 150px;
+	background-color: red;
+	transition: 500ms;
+}
+
+.transform__content:hover{
+	transform:translate(-20px, 20px);
+	transition:600ms;
+}
+
+.transform__x:hover{
+	transform:translateX(40px);
+	transition:600ms;
+}
+
+.transform__y:hover{
+	transform:translateY(40px);
+	transition:600ms;
+}
+
+
+
+.transform__scale:hover{
+	transform: scale(1.5);
+	transition:600ms;
+}
+
+.transform__scalex:hover{
+	transform: scale(0.5,0);
+	transition:600ms;
+}
+
+
+.transform__rotate:hover{
+	transform: rotate(45deg);
+	transition:600ms;
+}
+
+
+.transform__skew:hover{
+	transform: skew(40deg, 40deg);
+	transition:600ms;
+}
+
+
+
+
+.transform__matrix:hover{
+	transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+	transition:600ms;
+}
+
+
+
+.transform__mix:hover{
+	transform: translate(-20px, -10px) rotate(45deg) scale(1.4);
+	transition:500ms;
+}
+
+
+
+.transform__origin:hover{
+	transform: rotate(45deg);
+	transform-origin: top left;
+	transition:600ms;
+}
+
+
+.td__body{
+	perspective: 400px;
+	perspective-origin: left;
+}
+
+.td__content_hover:hover{
+	transform: rotateX(45deg);
+	transition:600ms;
+}
+
+
+.td__content_hover-translate:hover{
+	transform: translate3d(20px, 30px, 40px);
+	transition:600ms;
+}
+
+
+.td__content_hover-scale:hover{
+	transform: scale3d(1.2, 0.5, 1.5);
+	transition:600ms;
+}
+
+
+
+
+.td__content_hover-rotate:hover{
+	transform: rotate3d(-1, 1, 1, 45deg);
+	transition:600ms;
+}
+
+
+.td__content_hover-matrix:hover{
+	transform: matrix3d(1,0,0.00,0,0.00,0.98,0.17,2,0,-0.17,0.98,0,10,0,0,1);
+	-webkit-transform: matrix3d(1,0,0.00,0,0.00,0.98,0.17,2,0,-0.17,0.98,0,10,0,0,1);
+	transition:600ms;
+}
+
+
+.td__content_hover-mix:hover{
+	transform: translate3d(-30px, 30px, 30px) rotate3d(0,1,1,45deg);
+	transition:600ms;
+}
+
+
+.td__body-style{
+	transform-style:flat;
+	text-align: center;
+	color: #fff;
+	font-size: 40px;
+
+}
+
+.td__content_hover-style:hover{
+	transform: rotateY(45deg);
+	transition:600ms;
+}
+
+
+.td__content_hover-visibility:hover{
+	transform: rotateY(150deg);
+	backface-visibility: visible;
+}
+
+
+/* ----------------  tank*/
+
+
+
+
+.tank{
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 50px 0 100px 0;
+}
+
+
+.tank__cater {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 8px dashed #000;
+	border-radius: 20px;
+	width: 150px;
+	height: 50px;
+	background-color: rgba(83, 80, 80, 0.1);
+	overflow: hidden;
+	
+}
+
+
+
+
+.cater__items{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 5px solid #000;
+	box-shadow: 0 0 10px #000;
+	font-size: 20px;
+	font-weight: 700;
+	overflow: hidden;
+	background-color: rgb(130, 55, 201);
+}
+
+.cater__items span{
+	display:inline-block;
+	width: 100%;
+	height: 3px;
+	background-color: #000;
+	position: relative;
+}
+
+.cater__items span::after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 3px;
+	background-color: #000;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	transform: rotate(50deg);
+} 
+
+.cater__items span::before{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 3px;
+	background-color: #000;
+	transform: rotate(-50deg);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+}
+
+
+.tank__test{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 7px solid #000;
+	width: 120px;
+	height: 40px;
+	border-radius: 40px 20px 0 0;
+	transform: translateX(15px);
+	margin-bottom: 3px;
+	background-color: rgba(25, 109, 67, 0.664);
+}
+
+
+.tank__head{
+	width: 50px;
+	height: 30px;
+	border: 6px solid #000;
+	transform: translateX(60px);
+	border-radius: 25px 20px 0 0;
+	border-bottom: none;
+	background-color: rgba(43, 78, 14, 0.3);
+}
+
+
+.tank__gun{
+	width: 100px;
+	height: 20px;
+	border: 6px solid #000;
+	transform: translateX(-98%);
+	border-radius: 5px 0px 10px 5px;
+	background-color: rgb(102, 202, 132);
+}
+
+
+
+/* ---------------------------- */
+
