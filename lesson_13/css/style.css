@@ -139,7 +139,6 @@
 
 
 .hw-body{
-	border: 1px solid #000;
 	padding: 600px 0 50px 0;
 	position: relative;
 }
@@ -168,8 +167,11 @@
 	70%{
 		transform: translateX(-400px);
 	}
+	70%{
+		transform: translateY(-400px);
+	}
 	100%{
-		transform: translate(-700px, 500px);
+		transform: translate(-800px, 500px);
 	}
 }
 
